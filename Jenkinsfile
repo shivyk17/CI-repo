@@ -26,6 +26,18 @@ pipeline {
                  sh "mvn test"
            }
        }
+	  stage("SonarQube Analysis"){
+		environment {
+                SONAR_URL = "http://172.31.7.89:9000"
+            }  
+           steps {
+	           script {
+		        withSonarQubeEnv(credentialsId: 'Sonarqube') { 
+                        sh "mvn sonar:sonar"
+		        }
+	           }	
+           }
+       }  
     }
 }
 
