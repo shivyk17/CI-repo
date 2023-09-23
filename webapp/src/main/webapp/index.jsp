@@ -33,6 +33,6 @@
 
    <h1> Thank You </h1>
    <br>
-   <h1> Jai shree ram </h1>
+   <h1> Jai jai shree ram </h1>
    
 </form>
